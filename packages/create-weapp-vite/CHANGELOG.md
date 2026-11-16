@@ -1,5 +1,36 @@
 # create-weapp-vite
 
+## 3.6.2
+
+### Patch Changes
+
+- chore(deps): 基于 pnpm-workspace.yaml 中 catalog 版本变更，自动补充发布记录。
+  默认 catalog 变更键：@ai-sdk/anthropic, @ai-sdk/openai, @ai-sdk/openai-compatible, @devframes/agentic, @devframes/hub, @devframes/hub-ui, @icebreakers/eslint-config, @icebreakers/stylelint-config, @vitejs/devtools, @vitejs/devtools-kit, ai, devframe, eslint, postcss, vue-router, weapp-tailwindcss。命名 catalog 变更键：无。
+
+- chore(deps): 基于 pnpm-workspace.yaml 中 catalog 版本变更，自动补充发布记录。
+  默认 catalog 变更键：无。命名 catalog 变更键：weapp-tailwindcss-fixed(weapp-tailwindcss)。
+
+- chore(deps): 自动补充依赖升级发布记录。
+  涉及包：
+  - @weapp-vite/glass-easel-web-adapter：devDependencies.playwright
+  - @wevu/json-render：dependencies.@json-render/core
+
+- chore(deps): 自动补充依赖升级发布记录。
+  涉及包：
+  - @weapp-vite/ast：dependencies.@oxc-project/types
+
+- fix(weapp-vite): 状态保持 HMR 只保留模板和样式产物的内容指纹，避免缓存完整编译产物导致首次 HMR 内存占用异常增长。
+
+- fix(weapp-vite): 修复微信小程序组件的 scoped 样式失效
+
+  构建微信小程序时，模板和 WXSS 使用同一个作用域 class，避免生成微信组件不支持的属性选择器。
+
+- Updated dependencies:
+  - @weapp-core/init@6.1.5
+  - @weapp-core/logger@3.2.5
+  - @weapp-core/shared@3.5.1
+  - @weapp-vite/language-service@0.1.5
+
 ## 3.6.1
 
 ### Patch Changes
